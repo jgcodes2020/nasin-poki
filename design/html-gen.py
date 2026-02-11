@@ -2,11 +2,13 @@
 SP_MAPPING = {}
 COLOR_MAPPING = {}
 
-with open("csp-words.txt") as file:
-    for line in file:
-        [num, word] = line.strip().split("  ")
-        num = int(num, base=16)
-        SP_MAPPING[num] = word.lower()
+def load_words(filename):
+    global SP_MAPPING
+    with open(filename) as file:
+        for line in file:
+            [num, word] = line.strip().split("  ")
+            num = int(num, base=16)
+            SP_MAPPING[num] = word.lower()
 
 def load_categories(filename):
     global COLOR_MAPPING
@@ -20,6 +22,7 @@ def load_categories(filename):
             
             print(f"{angle:>3}: {len(words):<2} | {'*' * (len(words) * 2)}")
 
+load_words("wordlist-2022.txt")
 load_categories("categories.txt")
 
 with open("output.html", "w") as file:
@@ -38,7 +41,7 @@ with open("output.html", "w") as file:
             cp = row + col
             lookup = SP_MAPPING.get(cp) or ""
             angle = COLOR_MAPPING.get(lookup)
-            angle = f" style=\"background-color: hsl({angle} 100% 75%);\"" if angle is not None else ""
+            angle = f" style=\"background-color: hsl({angle} 100% 85%);\"" if angle is not None else ""
             file.write(f"<th class=\"sitelen-pona\"{angle}>{lookup}</th>")
             pass
     
