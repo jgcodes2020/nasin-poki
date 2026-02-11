@@ -3,11 +3,11 @@
 30 lon ala tawa tan awen kama
 45 soweli kijetesantakalu waso kala akesi pipi
 60 moku kasi kili pan soko namako
-75 sinpin monsi sewi anpa poka insa selo weka
+75 sinpin monsi sewi anpa poka 
 90 jan musi mani esun pali
 105 lawa lukin kute uta luka sijelo noka
 120 pilin pona ike suwi jaki nasa monsuta
-135 palisa linja lupa nena
+135 palisa linja leko sike lili suli
 150 kiwen telo ko kon ma
 165 kalama suno seli lete mun
 180 nanpa wan tu mute ale taso
@@ -18,7 +18,7 @@
 255 ante sama wile ken kepeken
 270 mama kulupu utala pana jo
 285 alasa moli lape mu pakala kipisi
-300 leko sike lili suli
+300 lupa nena insa selo weka
 315 sona toki lipu sitelen nimi nasin
 330 a n o kin seme
 345 pu ku su
