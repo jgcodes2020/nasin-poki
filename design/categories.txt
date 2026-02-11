@@ -1,6 +1,6 @@
 0 mi sina ona ni
 15 li e en anu pi la
-30 lon tawa tan kepeken sama
+30 lon ala tawa tan awen kama
 45 soweli kijetesantakalu waso kala akesi pipi
 60 moku kasi kili pan soko namako
 75 sinpin monsi sewi anpa poka insa selo weka
@@ -15,7 +15,7 @@
 210 ijo tenpo open pini sin poki
 225 ilo tomo supa len wawa misikeke
 240 kule loje jelo laso pimeja walo
-255 ala awen kama ante wile ken
+255 ante sama wile ken kepeken
 270 mama kulupu utala pana jo
 285 alasa moli lape mu pakala kipisi
 300 leko sike lili suli

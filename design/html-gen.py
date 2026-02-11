@@ -18,7 +18,7 @@ def load_categories(filename):
                     raise ValueError(f"word {word} cannot be assigned to angle {angle} (has angle {COLOR_MAPPING[word]})")
                 COLOR_MAPPING[word] = angle
             
-            print(f"{angle:>3}, {len(words)}")
+            print(f"{angle:>3}: {len(words):<2} | {'*' * (len(words) * 2)}")
 
 load_categories("categories.txt")
 
