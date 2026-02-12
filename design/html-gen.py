@@ -22,7 +22,7 @@ def load_categories(filename):
             
             print(f"{angle:>3}: {len(words):<2} | {'*' * (len(words) * 2)}")
 
-load_words("wordlist-2022.txt")
+load_words("wordlist-spk1.txt")
 load_categories("categories.txt")
 
 with open("output.html", "w") as file:
