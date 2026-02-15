@@ -1,3 +1,6 @@
+'''
+Generates an HTML file with a table based on wordlists and category files.
+'''
 
 SP_MAPPING = {}
 COLOR_MAPPING = {}
