@@ -10,8 +10,14 @@ FCITX_DIR = Path(__file__).parent
 @dataclass
 class CodeInfo:
     codes: dict[str, str]
-    letters: list[str]
+    letters: set[str]
     max_len: int
+
+    def merge(self, other: CodeInfo):
+        self.codes.update(other.codes)
+        self.letters.update(other.letters)
+        self.max_len = max(self.max_len, other.max_len)
+
 
 def load_wordlist(path) -> dict[str, int]:
     result = {}
@@ -21,17 +27,24 @@ def load_wordlist(path) -> dict[str, int]:
             result[nimi.lower()] = chr(int(nanpa, base=16))
     return result
 
+def load_punct(path) -> dict[str, str]:
+    data = None
+    with open(path, "rb") as file:
+        data = tomllib.load(file)
+    return data
+
+
 def load_codes(path, wordlist, prefix="") -> CodeInfo:
     result = {}
 
-    parser = None
+    data = None
     with open(path, "rb") as file:
-        parser = tomllib.load(file)
+        data = tomllib.load(file)
 
     letters = set()
     max_len = 0
 
-    for (lawa, poki) in parser.items():
+    for (lawa, poki) in data.items():
         # print(f"{lawa} -> {poki}")
         for (anpa, nimi) in poki.items():
             code = f"{prefix}{lawa}{anpa}"
@@ -45,17 +58,22 @@ def load_codes(path, wordlist, prefix="") -> CodeInfo:
 
     return CodeInfo(codes=result, letters=letters, max_len=max_len)
 
-def write_table(path, info: CodeInfo):
+def write_table(path, info: CodeInfo, punct: dict[str, str]):
     with open(path, "w") as f:
         f.write(f"""\
 Length={info.max_len}
-Code={"".join(info.letters)}
+KeyCode={"".join(sorted(info.letters))}
 [Data]
 """)
+        
         for (code, char) in info.codes.items():
             f.write(f"{code} {char}\n")
+        for (code, char) in punct.items():
+            f.write(f"{code} {char}\n")
+
     pass
 
 wordlist = load_wordlist(DATA_DIR / "wordlist-2026.txt")
 code_info = load_codes(DATA_DIR / "linku-common.toml", wordlist)
-write_table(FCITX_DIR/"nasin-poki.txt", code_info)
+punct = load_punct(DATA_DIR / "punct.toml")
+write_table(FCITX_DIR/"nasin-poki.txt", code_info, punct)

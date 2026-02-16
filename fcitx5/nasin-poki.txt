@@ -1,5 +1,5 @@
 Length=2
-Code=abdefghijklmnopqrstuvwy
+KeyCode=abdefghijklmnopqrstuvwy
 [Data]
 dm 󱤴
 ds 󱥞
@@ -130,3 +130,11 @@ pj 󱤒
 pa 󱤣
 pp 󱥏
 pw 󱥲
+[ 󱦐
+] 󱦑
+- 󱦕
++ 󱦖
+( 󱦗
+) 󱦘
+. 󱦜
+: 󱦝
