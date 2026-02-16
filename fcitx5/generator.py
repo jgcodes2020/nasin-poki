@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from pathlib import Path
 from configparser import ConfigParser
 import tomllib
@@ -48,14 +49,13 @@ def write_table(path, info: CodeInfo):
     with open(path, "w") as f:
         f.write(f"""\
 Length={info.max_len}
-Code=abcdefghijklmnopqrstuvwxyz
-
+Code={"".join(info.letters)}
 [Data]
 """)
         for (code, char) in info.codes.items():
-            f.write(f"{code}\t{char}\n")
+            f.write(f"{code} {char}\n")
     pass
 
 wordlist = load_wordlist(DATA_DIR / "wordlist-2026.txt")
 code_info = load_codes(DATA_DIR / "linku-common.toml", wordlist)
-write_table(FCITX_DIR/"table/nasin-poki.txt", code_info)
+write_table(FCITX_DIR/"nasin-poki.txt", code_info)
