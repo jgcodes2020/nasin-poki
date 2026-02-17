@@ -1,5 +1,4 @@
 # All words in this list fall into Linku common.
-# pu/ku/su (as names for Sonja Lang's publications) are not included.
 [f]
 m = "mi"
 s = "sina"
@@ -174,3 +173,8 @@ j = "jelo"
 a = "laso"
 p = "pimeja"
 w = "walo"
+
+[c]
+p = "pu"
+k = "ku"
+s = "su"

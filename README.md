@@ -10,7 +10,7 @@ Categories were laid out on the keyboard according to their frequency in [ilo Mu
 |:--:|--|--|
 | **q** | animals | soweli, kijetesantakalu, waso, kala, akesi, pipi |
 | **w** | body parts | lawa, lukin, kute, uta, luka, sijelo, noka |
-| **e** | actions of living beings | alasa, moli, lape, mu, pakala, kipisi |
+| **e** | conscious actions | alasa, moli, lape, mu, pakala, kipisi |
 | **r** | abstract things | ijo, tenpo, open, pini, sin, poki |
 | **t** | materials | kiwen, telo, ko, kon, ma |
 | **y** | human relationships | mama, kulupu, utala, pana, jo |
@@ -27,9 +27,9 @@ Categories were laid out on the keyboard according to their frequency in [ilo Mu
 | **j** | sentence particles | li, e, en, anu, pi, la |
 | **k** | change and ability | ante, sama, wile, ken, kepeken |
 | **l** | quantity | nanpa, wan, tu, mute, ale, taso |
-| **z** | PREFIX: rare | \[reserved\] |
-| **x** | PREFIX: uncommon | \[reserved\] |
-| **c** | works by mama Sonja | pu, ku, su |
+| **z** | \[reserved\] | \[unused\] |
+| **x** | prefix for rare words | \[reserved\] |
+| **c** | Toki Pona culture | pu, ku, su |
 | **v** | directions | sinpin, monsi, sewi, anpa, poka |
 | **b** | sexuality, gender | unpa, olin, meli, mije, tonsi |
 | **n** | colours | kule, loje, jelo, laso, pimeja, walo |

@@ -23,10 +23,10 @@ def load_categories(filename):
                     raise ValueError(f"word {word} cannot be assigned to angle {angle} (has angle {COLOR_MAPPING[word]})")
                 COLOR_MAPPING[word] = angle
             
-            print(f"{angle:>3}: {len(words):<2} | {'*' * (len(words) * 2)}")
+            # print(f"{angle:>3}: {len(words):<2} | {'*' * (len(words) * 2)}")
 
 load_words("wordlist-spk1.txt")
-load_categories("categories.txt")
+load_categories("categories-rare.txt")
 
 with open("output.html", "w") as file:
     file.write("""\
