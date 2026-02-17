@@ -3,4 +3,12 @@ There really aren't that many words in toki pona, but it is more than a few. Try
 
 This IME assigns *two*-letter combinations to each word. The first letter corresponds to 1 of 24 *categories* (in toki pona: *poki*), and the second letter selects a particular word.
 
-Less-common words can be accessed using `x` (like Cangjie) followed by two letters, once again with the first selecting a *poki*.
+## nasin lipu (organization)
+- **design**: scripts and other planning documents used for planning categories out
+- **data**: raw TOML files with the categories and punctuation mapping
+- **fcitx5**: A Fcitx5 plugin using the tables in *data/*.
+
+I am open to adding other support for other IME engines, though I will not be able to help maintain them.
+
+## ken sina lon lipu mi (licensing)
+GPLv3.

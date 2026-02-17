@@ -40,6 +40,7 @@ def compare_data(dbname, categories: dict[int, list[str]]):
 
 
 categories = load_categories("categories.txt")
+# ilo Muni database from 2025-10-20
 hit_pairs = compare_data("2025-10-20-trimmed.sqlite", categories)
 
 # write sorted categories out

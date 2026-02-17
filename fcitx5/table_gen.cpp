@@ -55,6 +55,5 @@ int main(int argc, char *argv[]) {
   {
     std::ofstream file(argv[2], std::ios::binary);
     output_dict.save(file, libime::TableFormat::Binary);
-    // output_dict.isInputCode(uint32_t c)
   }
 }

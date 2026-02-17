@@ -73,7 +73,7 @@ def write_table(path, info: CodeInfo):
             "key_code": "".join(sorted(info.letters)),
             "length": info.max_len,
             "data": info.codes
-        }, file)
+        }, file, indent=2)
 
 
 wordlist = load_wordlist(DATA_DIR / "wordlist-2026.txt")
