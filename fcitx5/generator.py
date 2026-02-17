@@ -2,7 +2,7 @@
 from pathlib import Path
 from configparser import ConfigParser
 import tomllib
-import itertools
+import json
 from dataclasses import dataclass
 
 DATA_DIR = Path(__file__).parents[1] / "data"
@@ -68,17 +68,12 @@ def load_codes(path, wordlist, prefix="") -> CodeInfo:
 
 
 def write_table(path, info: CodeInfo):
-    with open(path, "w") as f:
-        f.write(f"""\
-Length={info.max_len}
-KeyCode={"".join(sorted(info.letters))}
-[Data]
-""")
-
-        for (code, char) in info.codes.items():
-            f.write(f"{code}\t{char}\n")
-
-    pass
+    with open(path, "w") as file:
+        json.dump({
+            "key_code": "".join(sorted(info.letters)),
+            "length": info.max_len,
+            "data": info.codes
+        }, file)
 
 
 wordlist = load_wordlist(DATA_DIR / "wordlist-2026.txt")
@@ -86,4 +81,4 @@ wordlist = load_wordlist(DATA_DIR / "wordlist-2026.txt")
 code_info = load_codes(DATA_DIR / "linku-common.toml", wordlist)
 code_info.merge(load_punct(DATA_DIR / "punct.toml"))
 
-write_table(FCITX_DIR/"nasin-poki.txt", code_info)
+write_table(FCITX_DIR/"nasin-poki.json", code_info)

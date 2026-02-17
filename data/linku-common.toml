@@ -1,12 +1,12 @@
 # All words in this list fall into Linku common.
 # pu/ku/su (as names for Sonja Lang's publications) are not included.
-[d]
+[f]
 m = "mi"
 s = "sina"
 o = "ona"
 n = "ni"
 
-[k]
+[j]
 l = "li"
 e = "e"
 n = "en"
@@ -14,14 +14,14 @@ u = "anu"
 p = "pi"
 a = "la"
 
-[f]
+[g]
 a = "a"
 n = "n"
 o = "o"
 k = "kin"
 s = "seme"
 
-[j]
+[h]
 l = "lon"
 a = "ala"
 t = "tawa"
@@ -29,7 +29,7 @@ n = "tan"
 e = "awen"
 k = "kama"
 
-[v]
+[d]
 s = "sona"
 t = "toki"
 l = "lipu"
@@ -37,14 +37,14 @@ e = "sitelen"
 n = "nimi"
 a = "nasin"
 
-[m]
+[k]
 a = "ante"
 s = "sama"
 w = "wile"
 k = "ken"
 p = "kepeken"
 
-[e]
+[s]
 l = "pilin"
 p = "pona"
 i = "ike"
@@ -53,7 +53,7 @@ j = "jaki"
 n = "nasa"
 m = "monsuta"
 
-[i]
+[l]
 n = "nanpa"
 w = "wan"
 t = "tu"
@@ -61,14 +61,14 @@ m = "mute"
 a = "ale"
 s = "taso"
 
-[r]
+[a]
 j = "jan"
 m = "musi"
 n = "mani"
 e = "esun"
 p = "pali"
 
-[u]
+[r]
 i = "ijo"
 t = "tenpo"
 o = "open"
@@ -76,7 +76,7 @@ p = "pini"
 s = "sin"
 k = "poki"
 
-[g]
+[u]
 i = "ilo"
 t = "tomo"
 s = "supa"
@@ -84,21 +84,21 @@ l = "len"
 w = "wawa"
 m = "misikeke"
 
-[h]
+[t]
 k = "kiwen"
 t = "telo"
 o = "ko"
 n = "kon"
 m = "ma"
 
-[t]
+[y]
 m = "mama"
 k = "kulupu"
 u = "utala"
 p = "pana"
 j = "jo"
 
-[y]
+[e]
 a = "alasa"
 o = "moli"
 l = "lape"
@@ -106,7 +106,7 @@ m = "mu"
 p = "pakala"
 k = "kipisi"
 
-[n]
+[i]
 p = "palisa"
 l = "linja"
 e = "leko"
@@ -114,7 +114,7 @@ s = "sike"
 i = "lili"
 u = "suli"
 
-[b]
+[w]
 a = "lawa"
 u = "lukin"
 k = "kute"
@@ -123,14 +123,14 @@ l = "luka"
 s = "sijelo"
 n = "noka"
 
-[s]
+[o]
 k = "kalama"
 u = "suno"
 s = "seli"
 l = "lete"
 m = "mun"
 
-[l]
+[q]
 s = "soweli"
 j = "kijetesantakalu"
 w = "waso"
@@ -138,7 +138,7 @@ k = "kala"
 a = "akesi"
 p = "pipi"
 
-[a]
+[p]
 m = "moku"
 k = "kasi"
 i = "kili"
@@ -146,28 +146,28 @@ p = "pan"
 s = "soko"
 n = "namako"
 
-[w]
+[v]
 s = "sinpin"
 m = "monsi"
 w = "sewi"
 a = "anpa"
 p = "poka"
 
-[o]
+[m]
 l = "lupa"
 n = "nena"
 i = "insa"
 s = "selo"
 w = "weka"
 
-[q]
+[b]
 u = "unpa"
 o = "olin"
 e = "meli"
 i = "mije"
 t = "tonsi"
 
-[p]
+[n]
 k = "kule"
 l = "loje"
 j = "jelo"
