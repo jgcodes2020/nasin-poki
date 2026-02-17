@@ -2,10 +2,12 @@
 from pathlib import Path
 from configparser import ConfigParser
 import tomllib
+import itertools
 from dataclasses import dataclass
 
 DATA_DIR = Path(__file__).parents[1] / "data"
 FCITX_DIR = Path(__file__).parent
+
 
 @dataclass
 class CodeInfo:
@@ -27,11 +29,20 @@ def load_wordlist(path) -> dict[str, int]:
             result[nimi.lower()] = chr(int(nanpa, base=16))
     return result
 
-def load_punct(path) -> dict[str, str]:
+
+def load_punct(path) -> CodeInfo:
     data = None
     with open(path, "rb") as file:
         data = tomllib.load(file)
-    return data
+
+    letters = set()
+    max_len = 0
+    for key in data.keys():
+        letters.update(key)
+        max_len = max(max_len, len(key))
+
+    return CodeInfo(codes=data, letters=letters, max_len=max_len)
+
 
 
 def load_codes(path, wordlist, prefix="") -> CodeInfo:
@@ -52,28 +63,27 @@ def load_codes(path, wordlist, prefix="") -> CodeInfo:
             max_len = max(max_len, len(code))
             letters.update(code)
             result[code] = wordlist[nimi]
-    
-    letters = list(letters)
-    letters.sort()
 
     return CodeInfo(codes=result, letters=letters, max_len=max_len)
 
-def write_table(path, info: CodeInfo, punct: dict[str, str]):
+
+def write_table(path, info: CodeInfo):
     with open(path, "w") as f:
         f.write(f"""\
 Length={info.max_len}
 KeyCode={"".join(sorted(info.letters))}
 [Data]
 """)
-        
+
         for (code, char) in info.codes.items():
-            f.write(f"{code} {char}\n")
-        for (code, char) in punct.items():
-            f.write(f"{code} {char}\n")
+            f.write(f"{code}\t{char}\n")
 
     pass
 
+
 wordlist = load_wordlist(DATA_DIR / "wordlist-2026.txt")
+
 code_info = load_codes(DATA_DIR / "linku-common.toml", wordlist)
-punct = load_punct(DATA_DIR / "punct.toml")
-write_table(FCITX_DIR/"nasin-poki.txt", code_info, punct)
+code_info.merge(load_punct(DATA_DIR / "punct.toml"))
+
+write_table(FCITX_DIR/"nasin-poki.txt", code_info)
