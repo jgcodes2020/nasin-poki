@@ -79,6 +79,7 @@ def write_table(path, info: CodeInfo):
 wordlist = load_wordlist(DATA_DIR / "wordlist-2026.txt")
 
 code_info = load_codes(DATA_DIR / "linku-common.toml", wordlist)
+code_info.merge(load_codes(DATA_DIR / "linku-rare-trimmed.toml", wordlist, "x"))
 code_info.merge(load_punct(DATA_DIR / "punct.toml"))
 
 write_table(FCITX_DIR/"nasin-poki.json", code_info)
